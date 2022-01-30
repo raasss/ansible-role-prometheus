@@ -1,0 +1,10 @@
+---
+- name: restart prometheus
+  service:
+    name: "{{ prometheus_service_name }}"
+    state: restarted
+
+- name: reload prometheus
+  service:
+    name: "{{ prometheus_service_name }}"
+    state: reloaded
